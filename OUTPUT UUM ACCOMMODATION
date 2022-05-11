@@ -1,0 +1,186 @@
+run:
+===================================================
+      WELCOME  TO  STUDENT  UUM  ACCOMMODATION     
+===================================================
+1. ADD
+2. DELETE
+3. EDIT
+4. SEARCH
+5. DISPLAY
+6. EXIT
+
+YOUR OPTION: 1
+
+===================================================
+                  ADD INFORMATION                  
+===================================================
+NAME : ADI FAYYADH BIN AZMI
+MATRIC NUMBER : 289201
+COURSE : BANKING
+SEM : 4
+INASIS : TNB
+ROOM : H291
+
+---------------------------------------------------
+          INFORMATION SUCCESSFULLY ADDED           
+---------------------------------------------------
+===================================================
+        DO YOU WANT TO ADD NEW INFO ? [Y/N] : Y
+===================================================
+
+NAME : ELLIYA SHALIZA BINTI AMIN
+MATRIC NUMBER : 282873
+COURSE : TOURISM
+SEM : 7
+INASIS : BANK MUAMALAT
+ROOM : A330
+
+---------------------------------------------------
+          INFORMATION SUCCESSFULLY ADDED           
+---------------------------------------------------
+===================================================
+        DO YOU WANT TO ADD NEW INFO ? [Y/N] : Y
+===================================================
+
+NAME : FATIN ALYA BIN FAHMI
+MATRIC NUMBER : 286930
+COURSE : INFORMATION TECHNOLOGY
+SEM : 2
+INASIS : SIME DARBY
+ROOM : B209
+
+---------------------------------------------------
+          INFORMATION SUCCESSFULLY ADDED           
+---------------------------------------------------
+===================================================
+        DO YOU WANT TO ADD NEW INFO ? [Y/N] : N
+===================================================
+
+===================================================
+      WELCOME  TO  STUDENT  UUM  ACCOMMODATION     
+===================================================
+1. ADD
+2. DELETE
+3. EDIT
+4. SEARCH
+5. DISPLAY
+6. EXIT
+
+YOUR OPTION: 2
+
+===================================================
+                 DELETE INFORMATION                
+===================================================
+
+MATRIC NUMBER : 289201
+
+1. NAME   : ADI FAYYADH BIN AZMI
+2. COURSE : BANKING
+3. SEM    : 4
+4. INASIS : TNB
+5. ROOM   : H291
+
+CONFIRM TO DELETE? [Y/N] : Y
+
+---------------------------------------------------
+           INFORMATION SUCCESFULLY DELETED         
+---------------------------------------------------
+===================================================
+      WELCOME  TO  STUDENT  UUM  ACCOMMODATION     
+===================================================
+1. ADD
+2. DELETE
+3. EDIT
+4. SEARCH
+5. DISPLAY
+6. EXIT
+
+YOUR OPTION: 3
+
+===================================================
+                 EDIT INFORMATION                  
+===================================================
+
+INSERT MATRIC NUMBER TO EDIT : 286930
+
+1. NAME   : FATIN ALYA BIN FAHMI
+2. COURSE : INFORMATION TECHNOLOGY
+3. SEM    : 2
+4. INASIS : SIME DARBY
+5. ROOM   : B209
+
+CHOOSE THE OPTION ABOVE THAT WANT TO EDIT : 5
+NEW ROOM : C209
+
+---------------------------------------------------
+          INFORMATION SUCCESSFULLY EDITED          
+---------------------------------------------------
+===================================================
+      WELCOME  TO  STUDENT  UUM  ACCOMMODATION     
+===================================================
+1. ADD
+2. DELETE
+3. EDIT
+4. SEARCH
+5. DISPLAY
+6. EXIT
+
+YOUR OPTION: 4
+
+===================================================
+                 SEARCH INFORMATION                
+===================================================
+
+MATRIC NUMBER : 282873
+
+1. NAME   : ELLIYA SHALIZA BINTI AMIN
+2. COURSE : TOURISM
+3. SEM    : 7
+4. INASIS : BANK MUAMALAT
+5. ROOM   : A330
+
+---------------------------------------------------
+              INFORMATION WAS FOUNDED              
+---------------------------------------------------
+===================================================
+      WELCOME  TO  STUDENT  UUM  ACCOMMODATION     
+===================================================
+1. ADD
+2. DELETE
+3. EDIT
+4. SEARCH
+5. DISPLAY
+6. EXIT
+
+YOUR OPTION: 5
+
+===================================================
+                DISPLAY INFORMATION                
+===================================================
+
+ -----------------------------------------------------------------------------------------------------------------------------
+NAME                          MATRIC         COURSE                        SEM            INASIS              ROOM           
+ -----------------------------------------------------------------------------------------------------------------------------
+
+ELLIYA SHALIZA BINTI AMIN     282873         TOURISM                       7              BANK MUAMALAT       A330           
+FATIN ALYA BIN FAHMI          286930         INFORMATION TECHNOLOGY        2              SIME DARBY          C209           
+===================================================
+      WELCOME  TO  STUDENT  UUM  ACCOMMODATION     
+===================================================
+1. ADD
+2. DELETE
+3. EDIT
+4. SEARCH
+5. DISPLAY
+6. EXIT
+
+YOUR OPTION: 6
+
+###################################################
+#____PLEASE CONTACT US IF YOU HAVE ANY PROBLEM____#
+#EMAIL : itservices@uum.edu.my                    #
+#CALL    : +604-928 6666/6622/6644                #
+===================================================
+       THANK YOU FOR USING OUR SYSTEM SERVICE      
+===================================================
+BUILD SUCCESSFUL (total time: 8 minutes 52 seconds)
