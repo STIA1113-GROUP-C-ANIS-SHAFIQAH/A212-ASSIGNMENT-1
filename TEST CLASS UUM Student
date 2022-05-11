@@ -1,0 +1,85 @@
+package AssignmentA212;
+class UUMStudent {
+
+    //Matric number
+    private int matric;
+    //Full name
+    private String name;
+    //Student Course
+    private String course;
+    //Current sem
+    private int sem;
+    //Inasis 
+    private String inasis;
+    //Room NO
+    private String room;
+
+    public UUMStudent(int matric, String name, String course, int sem, String inasis, String room) {
+        this.matric = matric;
+        this.name = name;
+        this.course = course;
+        this.sem = sem;
+        this.inasis = inasis;
+        this.room = room;
+    }
+
+    public int getMatric() {
+        return matric;
+    }
+
+    public void setMatric(int matric) {
+        this.matric = matric;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getCourse() {
+        return course;
+    }
+
+    public void setCourse(String course) {
+        this.course = course;
+    }
+
+    public int getSem() {
+        return sem;
+    }
+
+    public void setSem(int sem) {
+        this.sem = sem;
+    }
+
+    public String getInasis() {
+        return inasis;
+    }
+
+    public void setInasis(String inasis) {
+        this.inasis = inasis;
+    }
+
+    public String getRoom() {
+        return room;
+    }
+
+    public void setRoom(String room) {
+        this.room = room;
+    }
+
+    public void printStudentInformation() {
+
+        System.out.println("");
+        System.out.println("1. NAME   : " + name);
+        System.out.println("2. COURSE : " + course);
+        System.out.println("3. SEM    : " + sem);
+        System.out.println("4. INASIS : " + inasis);
+        System.out.println("5. ROOM   : " + room);
+        System.out.println("");
+
+    }
+}
