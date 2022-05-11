@@ -1,0 +1,239 @@
+package AssignmentA212;
+import java.util.Scanner;
+public class UUMAccommodation {
+
+    public static int c = 0, end = 0;
+    private final static int MAX = 10;
+    private static final Scanner sc = new Scanner(System.in);
+    public static UUMStudent[] student = new UUMStudent[MAX];
+
+    public static void main(String args[]) {
+        do {
+        System.out.println("===================================================");
+        System.out.println("      WELCOME  TO  STUDENT  UUM  ACCOMMODATION     ");
+        System.out.println("===================================================");
+
+            Menu();
+
+            System.out.print("\nYOUR OPTION: ");
+            int choice = Integer.parseInt(sc.nextLine());
+            System.out.println("");
+
+            switch (choice) {
+                case 1:
+                    addStudent();
+                    break;
+                case 2:
+                    deleteStudent();
+                    break;
+                case 3:
+                    editStudent();
+                    break;
+                case 4:
+                    searchStudent();
+                    break;
+                case 5:
+                    displayStudent();
+                    break;
+                case 6:
+                    end = 1;
+                    break;
+            }
+        } while (end != 1);
+        System.out.println("###################################################");
+        System.out.println("#____PLEASE CONTACT US IF YOU HAVE ANY PROBLEM____#");
+    	System.out.println("#EMAIL : itservices@uum.edu.my                    #");
+    	System.out.println("#CALL    : +604-928 6666/6622/6644                #");
+        System.out.println("===================================================");
+        System.out.println("       THANK YOU FOR USING OUR SYSTEM SERVICE      ");
+        System.out.println("===================================================");
+    }
+
+    public static void Menu() {
+        System.out.println("1. ADD");
+        System.out.println("2. DELETE");
+        System.out.println("3. EDIT");
+        System.out.println("4. SEARCH");
+        System.out.println("5. DISPLAY");
+        System.out.println("6. EXIT");
+    }
+
+    public static void addStudent() {
+        char ans;
+        System.out.println("===================================================");
+        System.out.println("                  ADD INFORMATION                  ");
+        System.out.println("===================================================");
+
+        do {
+            System.out.print("NAME : ");
+            String name = sc.nextLine();
+
+            System.out.print("MATRIC NUMBER : ");
+            int matric = Integer.parseInt(sc.nextLine());
+
+            System.out.print("COURSE : ");
+            String course = sc.nextLine();
+
+            System.out.print("SEM : ");
+            int sem = Integer.parseInt(sc.nextLine());
+
+            System.out.print("INASIS : ");
+            String inasis = sc.nextLine();
+
+            System.out.print("ROOM : ");
+            String room = sc.nextLine();
+
+            student[c] = new UUMStudent(matric, name, course, sem, inasis, room);
+        System.out.println("");   
+        System.out.println("---------------------------------------------------");
+        System.out.println("          INFORMATION SUCCESSFULLY ADDED           ");
+        System.out.println("---------------------------------------------------");
+        System.out.println("===================================================");
+        System.out.print("        DO YOU WANT TO ADD NEW INFO ? [Y/N] : ");
+        ans = sc.nextLine().charAt(0);
+        System.out.println("===================================================");
+        System.out.println("");
+            c++;
+        } while (ans == 'y' || ans == 'Y');
+    }
+
+    public static void deleteStudent() {
+        System.out.println("===================================================");
+        System.out.println("                 DELETE INFORMATION                ");
+        System.out.println("===================================================");
+        System.out.println("");
+        int flag = 0;
+        System.out.print("MATRIC NUMBER : ");
+        do {
+            int searchMatricDelete = Integer.parseInt(sc.nextLine());
+            for (int x = 0; x < MAX; x++) {
+                if (student[x] != null && student[x].getMatric() == searchMatricDelete) {
+                    student[x].printStudentInformation();
+
+            System.out.print("CONFIRM TO DELETE? [Y/N] : ");
+            char delete = sc.nextLine().charAt(0);
+            switch (delete) {
+                case 'Y':
+                case 'y':
+            student[x] = null;
+        System.out.println("");
+        System.out.println("---------------------------------------------------");
+        System.out.println("           INFORMATION SUCCESFULLY DELETED         ");
+        System.out.println("---------------------------------------------------");
+            flag = 1;
+            break;
+                    }
+                }
+            }
+            if (flag == 0) {
+                System.out.println("NO RECORD WAS FOUNDED. PLEASE TRY AGAIN !");
+                System.out.print("MATRIC NUMBER : ");
+            }
+        } while (flag == 0);
+    }//deleteStudent
+
+    public static void editStudent() {
+        System.out.println("===================================================");
+        System.out.println("                 EDIT INFORMATION                  ");
+        System.out.println("===================================================");
+        System.out.println("");
+        int flag;
+        System.out.print("INSERT MATRIC NUMBER TO EDIT : ");
+        do {
+
+        int searchMatric = Integer.parseInt(sc.nextLine());
+        flag = 0;
+        for (int y = 0; y < MAX; y++) {
+            if (student[y] != null && student[y].getMatric() == searchMatric) {
+                student[y].printStudentInformation();
+                System.out.print("CHOOSE THE OPTION ABOVE THAT WANT TO EDIT : ");
+                    int edit = Integer.parseInt(sc.nextLine());
+                    switch (edit) {
+                        case 1:
+                            System.out.print("NEW NAME : ");
+                            String name = sc.nextLine();
+                            student[y].setName(name);                           
+                            break;
+                        case 2:
+                            System.out.print("NEW COURSE : ");
+                            String course = sc.nextLine();
+                            student[y].setCourse(course);                            
+                            break;
+                        case 3:
+                            System.out.print("NEW SEM : ");
+                            int sem = Integer.parseInt(sc.nextLine());
+                            student[y].setSem(sem);
+                            break;
+                        case 4:
+                            System.out.print("NEW INASIS : ");
+                            String inasis = sc.nextLine();
+                            student[y].setInasis(inasis);
+                            break;
+                        case 5:
+                            System.out.print("NEW ROOM : ");
+                            String room = sc.nextLine();
+                            student[y].setRoom(room);
+                            break;
+                        default:
+                            System.out.println("INVALID. PLEASE TRY AGAIN !");
+                    }
+                    flag = 1;
+        System.out.println("");
+        System.out.println("---------------------------------------------------");
+        System.out.println("          INFORMATION SUCCESSFULLY EDITED          ");
+        System.out.println("---------------------------------------------------");
+                }
+            }
+            if (flag == 0) {
+                System.out.println("NO RECORD WAS FOUNDED. PLEASE TRY AGAIN !");
+                System.out.print("MATRIC NUMBER : ");
+            }
+        } while (flag == 0);
+    }
+
+    public static void searchStudent() {
+        System.out.println("===================================================");
+        System.out.println("                 SEARCH INFORMATION                ");
+        System.out.println("===================================================");
+        System.out.println("");
+        int flag = 0;
+        System.out.print("MATRIC NUMBER : ");
+        do {
+            int searchMatric = Integer.parseInt(sc.nextLine());
+            for (int j = 0; j < MAX; j++) {
+                if (student[j] != null && student[j].getMatric() == searchMatric) {
+                    student[j].printStudentInformation();
+        System.out.println("---------------------------------------------------");
+        System.out.println("              INFORMATION WAS FOUNDED              ");
+        System.out.println("---------------------------------------------------");
+                    flag = 1;
+                    break;      
+                }
+            }
+            if (flag == 0) {
+                System.out.println("NO RECORD WAS FOUNDED. PLEASE TRY AGAIN !");
+                System.out.print("MATRIC NUMBER : ");
+            }
+        } while (flag == 0);
+    }
+
+    public static void displayStudent() {
+        System.out.println("===================================================");
+        System.out.println("                DISPLAY INFORMATION                ");
+        System.out.println("===================================================");
+        System.out.println("");
+        System.out.println(" -----------------------------------------------------------------------------------------------------------------------------");
+        System.out.printf("%-30s%-15s%-30s%-15s%-20s%-15s%n ", "NAME", "MATRIC", "COURSE", "SEM", "INASIS", "ROOM");
+        System.out.println("-----------------------------------------------------------------------------------------------------------------------------");
+        System.out.println("");
+        for (int i = 0; i < MAX; i++) {
+
+            if (student[i] == null) {
+                continue;
+            }
+
+            System.out.printf("%-30s%-15d%-30s%-15d%-20s%-15s", student[i].getName(), student[i].getMatric(), student[i].getCourse(), student[i].getSem(), student[i].getInasis(), student[i].getRoom());
+            System.out.println();
+        }
+    }
+}
